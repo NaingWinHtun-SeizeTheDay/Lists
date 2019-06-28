@@ -12,5 +12,13 @@
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    return view('pages/welcome');
 });
+
+Route::get('/about', function () {
+    return view('pages/aboutUs');
+});
+
+Route::resource('/list', 'ListController');
+
+Route::resource('/recent', 'RecentListController');
